@@ -1,79 +1,62 @@
 ---
-language: Scala
-filename: learnscala.scala
+language: Potigol
+filename: potigol.poti
 contributors:
-    - ["George Petrov", "http://github.com/petrovg"]
-    - ["Dominic Bou-Samra", "http://dbousamra.github.com"]
-    - ["Geoff Liu", "http://geoffliu.me"]
-    - ["Ha-Duong Nguyen", "http://reference-error.org"]
+    - ["Leonardo Lucena", "http://github.com/lrlucena"]
 ---
 
-Scala - the scalable language
+Potigol
 
-```scala
+```python
 
-/*
-  Set yourself up:
-
-  1) Download Scala - http://www.scala-lang.org/downloads
-  2) Unzip/untar to your favourite location and put the bin subdir in your `PATH` environment variable
-  3) Start a Scala REPL by running `scala`. You should see the prompt:
-
-  scala>
-
-  This is the so called REPL (Read-Eval-Print Loop). You may type any Scala
-  expression, and the result will be printed. We will explain what Scala files
-  look like further into this tutorial, but for now, let's start with some
-  basics.
-
-*/
+#  Set yourself up:
+#
+#  1) Download Potigol - http://potigol.github.io
+#  2) Unzip/untar to your favourite location and put the bin subdir in your `PATH` environment variable
+#  3) Run a program using `potigol`.
 
 
-/////////////////////////////////////////////////
-// 1. Basics
-/////////////////////////////////////////////////
+##################################################
+# 1. Basics
+##################################################
 
-// Single-line comments start with two forward slashes
+# Single-line comments start with #
 
-/*
-  Multi-line comments, as you can already see from above, look like this.
-*/
+# Printing, and forcing a new line on the next print
+escreva "Hello world!"
+escreva 10
+# Hello world!
+# 10
 
-// Printing, and forcing a new line on the next print
-println("Hello world!")
-println(10)
-// Hello world!
-// 10
+# Printing, without forcing a new line on next print
+imprima "Hello world"
+imprima 10
+# Hello world10
 
-// Printing, without forcing a new line on next print
-print("Hello world")
-print(10)
-// Hello world10
+# Declaring values.
+# value declarations are immutable, whereas vars are mutable. Immutability is
+# a good thing.
+x = 10        # x is now 10
+x = 20        # error: reassignment to constant value
+var y := 10
+y = 20        # y is now 20
 
-// Declaring values is done using either var or val.
-// val declarations are immutable, whereas vars are mutable. Immutability is
-// a good thing.
-val x = 10 // x is now 10
-x = 20     // error: reassignment to val
-var y = 10
-y = 20     // y is now 20
 
-/*
-  Scala is a statically typed language, yet note that in the above declarations,
-  we did not specify a type. This is due to a language feature called type
-  inference. In most cases, Scala compiler can guess what the type of a variable
-  is, so you don't have to type it every time. We can explicitly declare the
-  type of a variable like so:
-*/
-val z: Int = 10
-val a: Double = 1.0
+#  Potigol is a statically typed language, yet note that in the above declarations,
+#  we did not specify a type. This is due to a language feature called type
+#  inference. In most cases, Potigol compiler can guess what the type of a variable
+#  is, so you don't have to type it every time. We can explicitly declare the
+#  type of a variable like so:
 
-// Notice automatic conversion from Int to Double, result is 10.0, not 10
-val b: Double = 10
+var z: Inteiro = 10
+var a: Real = 1.0
 
-// Boolean values
-true
-false
+# Notice automatic conversion from Inteiro to Real, result is 10.0, not 10
+var b: Double = 10
+
+# Boolean values
+verdadeiro
+falso
 
 // Boolean operations
 !true         // false
